@@ -19,7 +19,8 @@ $(LINK_TARGET) : $(OBJS)
 	$(CC) -o $@ $^ $(CFLAGS) $(CLIBS)
 
 %.o: %.cpp
-	g++ -g -o $@ -c $< $(CFLAGS) $(CLIBS)
+	$(CC) -o $@ -c $< $(CFLAGS) $(CLIBS)
 
 test.o : Object.hpp Value.hpp
 Object.o: Object.hpp Value.hpp
+Value.o: Value.hpp
