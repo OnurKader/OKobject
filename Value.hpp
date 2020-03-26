@@ -41,7 +41,11 @@ class Value
 	Value& operator=(const Value&);
 
 	template<typename T>
-	Value& operator=(T);
+	Value& operator=(T value)
+	{
+		m_value = value;
+		return *this;
+	}
 
 	void clear();
 

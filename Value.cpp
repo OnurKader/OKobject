@@ -16,13 +16,6 @@ Value& Value::operator=(const Value& other)
 	return *this;
 }
 
-template<typename T>
-Value& Value::operator=(T value)
-{
-	m_value = value;
-	return *this;
-}
-
 void Value::clear() { m_value.reset(); }
 
 }	 // namespace OK
